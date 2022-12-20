@@ -2,9 +2,9 @@
 	"name": "Ubuntu",
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
-		// "ghcr.io/devcontainers/features/aws-cli:1": {},
-		// "ghcr.io/devcontainers/features/terraform:1": {},
-		// "ghcr.io/guiyomh/features/vim:0": {}
+		"ghcr.io/devcontainers/features/aws-cli:1": {},
+		"ghcr.io/devcontainers/features/terraform:1": {},
+		"ghcr.io/guiyomh/features/vim:0": {}
 	},
 	// "remoteUser": "root",
 	"mounts": [

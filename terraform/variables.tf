@@ -4,9 +4,9 @@ variable "bucket_vars" {
   type        = map(string)
 }
 variable "bucket_folders" {
-  type = list(string)
+  type        = list(string)
   description = "List of folder structure for bucket"
-  default = [] 
+  default     = []
 }
 variable "context_vars" {
   description = "Map of variables use for bucket"

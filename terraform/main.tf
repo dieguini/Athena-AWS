@@ -17,4 +17,11 @@ module "bucket" {
   source      = "./modules/s3"
   bucket_name = var.bucket_vars.name
   tags        = var.tags
+
+  # Folder Structure
+  bucket_folders = var.bucket_folders
+
+  # File upload
+  folder_path = "./s3_files"
+  upload_path = "sample_json/"
 }

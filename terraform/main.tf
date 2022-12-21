@@ -25,3 +25,8 @@ module "bucket" {
   folder_path = "./s3_files"
   upload_path = "sample_json/"
 }
+# Database - Glue
+module "glue_database" {
+  source = "./modules/glue"
+  database_name = var.database_glue_vars.database_name
+}

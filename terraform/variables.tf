@@ -12,6 +12,11 @@ variable "context_vars" {
   description = "Map of variables use for bucket"
   type        = map(string)
 }
+# Database - Glue
+variable "database_glue_vars" {
+  description = "Map of variables use for bucket"
+  type        = map(string)
+}
 # Tagging system
 variable "resource_specific_tags" {
   description = "Map of tags to assign to specific resources supporting tags. Merged with `tags`."

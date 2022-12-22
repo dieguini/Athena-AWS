@@ -3,11 +3,6 @@ variable "bucket_vars" {
   description = "Map of variables use for bucket"
   type        = map(string)
 }
-variable "bucket_folders" {
-  type        = list(string)
-  description = "List of folder structure for bucket"
-  default     = []
-}
 variable "context_vars" {
   description = "Map of variables use for bucket"
   type        = map(string)
@@ -16,6 +11,26 @@ variable "context_vars" {
 variable "database_glue_vars" {
   description = "Map of variables use for bucket"
   type        = map(string)
+}
+/* variable "tables" {
+  description = "Tables to use on Glue"
+  type        = list(string)
+  default     = []
+} */
+variable "tables" {
+  type = list(object({
+    name     = string
+    location = string
+    storage_descriptor = object({
+      input_format          = string
+      output_format         = string
+      serialization_library = string
+    })
+    columns = list(object({
+      name = string
+      type = string
+    }))
+  }))
 }
 # Tagging system
 variable "resource_specific_tags" {

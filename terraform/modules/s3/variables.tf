@@ -2,19 +2,9 @@ variable "bucket_name" {
   type        = string
   description = "Bucket name for creation"
 }
-variable "bucket_folders" {
-  type        = list(string)
-  description = "List of folder structure for bucket"
-  default     = []
-}
-variable "folder_path" {
+variable "bucket_folder" {
   type        = string
-  description = "Path of folder to upload"
-}
-variable "upload_path" {
-  type        = string
-  description = "Path where the files will be upload (Default root)"
-  default = "" # Default root
+  description = "Bucket folder to upload"
 }
 # Taggin system
 variable "tags" {
